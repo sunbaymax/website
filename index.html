@@ -13,10 +13,11 @@
 		<title>北京中集智冷科技有限公司</title>
 		<!--// Icons //-->
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<!--<link href="css/font-awesome.css" rel="stylesheet">-->
 		<!--// Google Fonts //-->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap&subset=latin-ext" rel="stylesheet">
-		<link rel="stylesheet" href="https://www.jq22.com/jquery/bootstrap-4.2.1.css">
+		<link rel="stylesheet" href="css/bootstrap-4.2.1.css">
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<!--// FrameWorks //-->
 		<link rel="stylesheet" href="css/frameworks.css">
@@ -132,14 +133,14 @@
 
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 wow fadeInUp" data-speed="0.3s">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInUp" data-speed="0.3s">
 							<div class="section-heading">
-								<img src="img/company.png" class="companyimg" />
+								<img src="img/companybg.png" class="companyimg" />
 							</div>
 						</div>
-						<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 wow fadeInUp" data-speed="0.3s">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInUp" data-speed="0.3s">
 							<div class="section-heading">
-								<h2 class="section-title">公司简介 <span>/ Who we are</span></h2>
+								<h2 class="section-title">公司简介 <span>/ Company Profile</span></h2>
 								<div class="section-sub-title" id="comprofilepush">
 								    <!--<p class="section-sub-title mg15b0">
 										北京中集智冷科技有限公司，是“中集集团”旗下一家提供智能冷链监控设备解决方案的自主创新型科技企业。致力于医药、食品行业冷链安全的实际需求，以国家GSP规范为操作标准，从冷链全过程温控、数据的采集和存储等环节为行业客户提供安全、专业、高效、信息化的冷链一体化互联网云平台服务。
@@ -169,7 +170,7 @@
 					
 					<div class="row align-items-center mg30">
 						<div class="col-md-12 col-lg-12 col-sm-12  text-center">
-							<h2 class="section-title">产品中心 <p><span> What do we have</span></p></h2>
+							<h2 class="section-title">产品中心 <p><span> Product Center</span></p></h2>
 						</div>
 					</div>
 
@@ -262,7 +263,7 @@
 						</div>
 						<div class="row price-table item-shadow">
 							<div class="col-md-6 col-lg-6 text-center features-image-resp wow slideInLeft align-items-center" data-wow-delay="0.5s">
-								<img src="img/医药行业占位图.png" alt="About image" style="width: 100%;height: 100%;">
+								<img src="img/souyiyao.png" alt="About image" style="width: 100%;height:auto;margin-top: 10px;" class="solutionImg">
 							</div>
 							<div class="col-md-6 col-lg-6 wow fadeInRight">
 								<div class="features-inner solutionright">
@@ -361,10 +362,10 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-xs-12 col-md-6 col-lg-6 features-image-resp wow slideInRight">
+									<div class="col-xs-12 col-md-6 col-lg-6 features-image-resp wow slideInRight  align-items-center">
 
-										<div class="feature-image-wrap" data-wow-delay="0.5s">
-											<img src="img/newsimg.png" alt="About image" class="img-fluid">
+										<div class="feature-image-wrap align-items-center" data-wow-delay="0.5s">
+											<img src="" alt="About image" class="img-fluid" id="newsImg" style="width: 100%;height: auto;margin-top: 10px;">
 										</div>
 									</div>
 
@@ -760,12 +761,13 @@
 						$("#productspush").append(productstr);
 						appinocks_owl_carousel();
 					//新闻中心
+					$("#news #newsImg").attr("src",res.news.one[0].picture);
 					var newstr='';
 					$.each(res.news.one,function(index,value){
-						newstr+=`<li class="newitem" idi='${value.id}'>
+						newstr+=`<li class="newitem" idi='${value.id}' img='${value.picture}'>
 									<a href='javascript:void(0)' class="newitemleft">
 										<span class="newsitemday">${index+1}</span>
-										<span class="newsitemmounth">${value.time}</span>
+										<span class="newsitemmounth">${value.create_time}</span>
 									</a>
 									<div class="newitemright">
 										<a href='javascript:void(0)' class="newsitemtitle">${value.title}</a>
@@ -776,14 +778,14 @@
 					$("#enterprisenews").append(newstr);
 					var industrynewsstr='';
 					$.each(res.news.two,function(index,value){
-						industrynewsstr+=`<li class="newitem" idi='${value.id}'>
+						industrynewsstr+=`<li class="newitem" idi='${value.id}' img='${value.picture}'>
 									<a href='javascript:void(0)' class="newitemleft">
 										<span class="newsitemday">${index+1}</span>
-										<span class="newsitemmounth">${value.time}</span>
+										<span class="newsitemmounth">${value.create_time}</span>
 									</a>
 									<div class="newitemright">
 										<a href='javascript:void(0)' class="newsitemtitle">${value.title}</a>
-										<a href='javascript:void(0)' class="newsitemdesc">${value.descript}</a>
+										<a href='javascript:void(0)' class="newsitemdesc">${value.desc}</a>
 									</div>
 								</li>`;
 					})

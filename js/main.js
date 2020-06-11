@@ -150,7 +150,7 @@ function appinocks_owl_carousel() {
 				items: 3
 			},
 			1000: {
-				items: 4
+				items: 3.3
 			}
 		}
 	});

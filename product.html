@@ -12,16 +12,14 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>北京中集智冷科技有限公司</title>
 		<!--// Icons //-->
-		<link rel="stylesheet" href="https://www.jq22.com/jquery/font-awesome.4.7.0.css">
-		<!--// Google Fonts //-->
+		<!--<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap&subset=latin-ext" rel="stylesheet">
-		<link rel="stylesheet" href="https://www.jq22.com/jquery/bootstrap-4.2.1.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap&subset=latin-ext" rel="stylesheet">-->
+		<link rel="stylesheet" href="css/bootstrap-4.2.1.css">
 		<link href="css/bootstrap.css" rel="stylesheet">
-
-		<!--<link rel="stylesheet" href="css/bootstrap.css" />-->
 		<!--// FrameWorks //-->
 		<link rel="stylesheet" href="css/frameworks.css">
+		<!--// Theme Main Js //-->
 		<!--// Theme Main Js //-->
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/product.css">
@@ -350,6 +348,7 @@
 		<!--// Main Js //-->
 		<!--<script src="js/main.js"></script>-->
 		<script src="js/index.js"></script>
+		<script src="js/second.js"></script>
 		<script>
 			window._bd_share_config = {
 				common: {
@@ -394,8 +393,6 @@
 				},
 				dataType:'json',
 				success:function(res){
-					console.log(res.info.title);
-					console.log(res.info);
 					$(".product_name").html(res.info[0].title)
 					$("#content").html(res.info[0].content)
 					

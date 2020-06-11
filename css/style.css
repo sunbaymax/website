@@ -344,7 +344,7 @@ p {
 	}
 	.services .companyimg {
 		width: 100%;
-		height: 373px;
+		height: 280px;
 	}
 	.header .navbar-brand .logo-img {
 		height: 26px;
@@ -1291,6 +1291,9 @@ p {
 		margin-top: 73px!important;
 	}
 }
+.hero-section .carousel-inner .carousel-item {
+		margin-top: 70px!important;
+	}
 
 
 /* ---------------------------------------------------------------- */
@@ -1551,7 +1554,7 @@ p {
 
 @media only screen and (max-width: 767.98px) {
 	.features-image-resp {
-		margin-top: 60px;
+		margin-top: 0px;
 	}
 	.features-row-mt {
 		margin-top: 60px;
@@ -1963,6 +1966,10 @@ p {
 .newitem .newitemleft .ahover {
 	color: #FFFFFF;
 }
+.hangyenews .newitem .newitemleft:hover {
+    color: #FFFFFF;
+    background: #1E5CB3;
+}
 #news .hangyenews .newitem .newitemleft {
     display: flex;
     width: 60px;
@@ -2035,6 +2042,10 @@ p {
 	width: 60px;
 	font-size: 30px;
 	color: #999999;
+}
+
+.newitem .newitemleft .newsitemdayhover {
+	color: #FFFFFF;
 }
 
 .newitem .newitemleft .newsitemmounth {
@@ -2456,8 +2467,8 @@ p {
 	left: 0;
 	top: 0;
 	display: inline-block;
-	height: 40px;
-	width: 40px;
+	height: 48px;
+	width: 41px;
 	z-index: 999;
 	
 }
@@ -2749,7 +2760,7 @@ p {
 	#news #menuhangye .hangyenews li {
 		font-size: 14px;
 		letter-spacing: 1.5px;
-		line-height: 2;
+		/*line-height: 2;*/
 	}
 	 .team-card  .productimg .tpb{
 		max-height: 200px;
@@ -2760,6 +2771,24 @@ p {
 		width: 150px;
 		height: auto;
 		
+	}
+		.qiyenews .newitem .newitemright .newsitemdesc {
+		font-size: 14px;
+		color: #999;
+		margin-top: -3px;
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+		.hangyenews .newitem .newitemright .newsitemdesc {
+		font-size: 14px;
+		color: #999;
+		margin-top: -3px;
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	.about .team-card .productimg {
 	    width: 160px;
@@ -2964,7 +2993,22 @@ p {
 	#news .qiyenews .newitem {
 		overflow: hidden;
 	}
+	#news .hangyenews .newitem {
+		overflow: hidden;
+	}
 	.qiyenews .newitem .newitemright .newsitemtitle {
+		display: inline-block;
+		font-size: 16px;
+		color: #222222;
+		height: 40px;
+		line-height: 40px;
+		width: 100%;
+		border-bottom: 1px solid #CCCCCC;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	}
+	.hangyenews .newitem .newitemright .newsitemtitle {
 		display: inline-block;
 		font-size: 16px;
 		color: #222222;
@@ -3231,6 +3275,7 @@ p {
 #news {
 	margin-bottom: -150px;
 	z-index: 99;
+	padding: 36px 0 100px;
 }
 
 .download .titlename .section-title {
@@ -3607,15 +3652,7 @@ h2 {
 		padding: 0 10px 0 0;
 		align-items: center;
 	}
-	.qiyenews .newitem .newitemright .newsitemdesc {
-		font-size: 14px;
-		color: #999;
-		margin-top: -3px;
-		width: 100%;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
+
 	.download #blackbg {
     padding-left: 20px;
     padding-bottom: 1px;
