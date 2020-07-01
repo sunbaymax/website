@@ -29,14 +29,16 @@ $(function() {
 
 	})
 	$('#soulutionmyTab #yyhy').click(function(e) {
-		$('#features .solutionImg').attr('src','img/souyiyao.png');
+		let _src=$(this).attr('cimg');
+		$('#features .solutionImg').attr('src',_src);
 		$(this).addClass('active')
 		$("#soulutionmyTab #sphy").removeClass('active')
 		$('#features .tab-content #menuyiyao').addClass("show");
 		$('#features .tab-content #menushipin').removeClass("show");
 	})
 	$('#soulutionmyTab #sphy').click(function(e) {
-		$('#features .solutionImg').attr('src','img/soushengxian.png')
+		let _src=$(this).attr('cimg');
+		$('#features .solutionImg').attr('src',_src)
 		$(this).addClass('active')
 		$("#soulutionmyTab #yyhy").removeClass('active')
 		$(this).addClass('active')
@@ -45,7 +47,14 @@ $(function() {
 		$('#features .tab-content #menuyiyao').hide()
 		$('#features .tab-content #menushipin').addClass("show");
 	})
-
+    $('#soulutionmyTab #soulutionbtn').click(function(e) {
+        let type=$(this).parent().find('.active').text();
+        if(type=='医药行业'){
+        	location.href = "solution.html?type=1";
+        }else{
+            location.href = "solution.html?type=2";	
+        }
+    })
 	$('#news #qynewbtn').click(function(e) {
 		$("#news #newsImg").attr("src",$(".qiyenews li:first-child").attr('img'));
 		$(this).addClass('active')
@@ -85,7 +94,16 @@ $(function() {
 		$("body .download #tab-item1").hide();
 		$("body .download #tab-item2").hide();
 	});
-
+	$("body").on("click", "#news #searchmore", function() {
+		let curnew = $(this).parent().find('.active').text();
+		let _type = '';
+		if(curnew == "企业新闻") {
+			_type = 1
+		} else {
+			_type = 2
+		}
+		location.href = 'news.html?type=' + _type
+	});
 	var oldColor = "";
 
 	$(".fixmenu .item .tel_img").mouseover(function() {
@@ -145,7 +163,8 @@ $(function() {
 	});
 	$("body").on("click", "#news .newitem", function() {
 		let id = $(this).attr('idi');
-		location.href = 'news.html?id=' + id
+		let itype = $(this).attr('itype');
+		location.href = 'news.html?id=' + id+"&type="+itype;
 	});
 
 })

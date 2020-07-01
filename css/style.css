@@ -48,7 +48,9 @@
 
 /* 01.Base                               
 /* ---------------------------------------------------------------- */
-
+*{
+	letter-spacing: 1.5px;
+}
 body {
 	font-size: 16px;
 	font-family: PingFangSC, helvetica neue, hiragino sans gb, arial, microsoft yahei ui, microsoft yahei, simsun, sans-serif!important;
@@ -58,6 +60,7 @@ body {
 	position: relative;
 	box-sizing: border-box;
 	color: #636b72;
+	/*letter-spacing: 1.5px;*/
 }
 
 ul,
@@ -223,9 +226,7 @@ p {
 }
 
 .download .downloadwen .downloaditemcontent {
-	margin: 30px 0;
-	letter-spacing: 1.5px;
-	width: 90%;
+	width: 100%;
 }
 
 .download .downloadbtn .fa-long-arrow-down {
@@ -241,7 +242,68 @@ p {
 	text-align: center;
 	border: 1px solid #e8e8e8;
 }
+.download .downright{
+	padding-right: 50px;
+}
+.download .downright .tab-item{
+	margin: 30px 0 50px;
+}
+.download .downright .downloaditemtop{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 40px;
+	border-bottom: 1px solid #CCCCCC;
+}
+.download .downright .itemdowncontent{
+	margin: 50px 0;
+}
+.downright .itemdowncontent .downloaditemtitle:hover{
+	color: #4685DC;
+}
+.downright .itemdowncontent .download-btnok:hover{
+	background: #3D6FB4;
+	color: #FFFFFF;
+	
+}
 
+.download .downright .itemdowncontent:first-child{
+	margin: 0px 0px 50px;
+}
+.downright .downloaditemtop .download-btnok{
+	display: inline-block;
+	width: 80px;
+	height: 24px;
+	color: #000000;
+	background: #CDCECD;
+	border-radius: 3px;
+}
+.download .downright .pager {
+    padding-left: 0;
+    margin: 20px 0;
+    text-align: left;
+    list-style: none;
+    color: #121212;
+    display: flex;
+}
+.download .downright .pager a{
+	margin-right: 10px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    color: #020202;
+    border-radius: 0;
+    padding: 0;
+    background: #CECECE;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.download .downright .pager a:hover{
+	background:#3D6FB4;
+	color: #FFFFFF;
+	border: 0;
+}
 .downright .tab {
     width: 100px;
     height: 30px;
@@ -264,7 +326,7 @@ p {
 
 .section-padding .companyimg {
 	width: 100%;
-	height: 375px;
+	height: 420px;
 }
 
 .servicesleft,
@@ -284,6 +346,7 @@ p {
 	margin-bottom: 20px;
 	font-size: 24px;
 	letter-spacing: 1.5px;
+	
 }
 
 .section-title h2 {
@@ -633,6 +696,7 @@ p {
 	-o-transition: all 0.25s linear;
 	-ms-transition: all 0.25s linear;
 	transition: all 0.25s linear;
+	border-top: 1px solid #F1F4FC;
 }
 
 
@@ -1868,7 +1932,14 @@ p {
 	padding: 40px 0;
 	background: #fff;
 }
-
+#features{
+    padding: 100px 0 66px;
+    position: relative;
+}
+#features .slideInLeft .solutionImg{
+	width: 100%;
+	height: 360px;
+}
 #features .price-table {
 	border-radius: 5px;
 	padding: 15px 0;
@@ -1948,7 +2019,12 @@ p {
 	height: 64px;
 	width: 100%;
 }
-
+#news .dingweinew #newsImg{
+	display: inline-block;
+    width: 100%;
+    height: 320px;
+    margin-top: 15px;
+}
 #news .qiyenews .newitem .newitemleft {
 	display: flex;
 	width: 60px;
@@ -2415,6 +2491,15 @@ p {
 	#features .yiyao{
 		height: auto;
 	}
+	#features .slideInLeft .solutionImg{
+		width: 100%;
+		height: 280px;
+	}
+	#news .dingweinew #newsImg {
+    display: inline-block;
+    width: 100%;
+    height: 280px;
+}
 }
 
 
@@ -2644,6 +2729,7 @@ p {
 
 #features .section-title {
 	height: 80px;
+	margin-bottom: 40px;
 }
 
 #features .section-title::after {
@@ -2863,7 +2949,13 @@ p {
 	color: #000 !important;
 	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
 }
-
+.download .downright .downloaditemtitle{
+	font-size: 18px;
+}
+.download .downright .downloaditemdesc{
+	margin: 5px 0;
+	font-size: 14px;
+}
 .download-btn:hover {
 	background: transparent;
 	border: 2px solid #fff;
@@ -3275,7 +3367,7 @@ p {
 #news {
 	margin-bottom: -150px;
 	z-index: 99;
-	padding: 36px 0 100px;
+	padding: 66px 0 100px;
 }
 
 .download .titlename .section-title {
@@ -3304,6 +3396,7 @@ p {
 	background-size: cover;
 	background-size: 100% 100%;
 	background-attachment: fixed;
+	border-radius: 5px;
 }
 .download .titlename .section-title::after {
 	position: absolute;
@@ -3330,8 +3423,8 @@ p {
 }
 
 .download .downright .downloadwen {
-	padding: 60px 0px 0px;
-	width: 70%;
+	/*padding: 30px 0px 0px;*/
+	/*width: 70%;*/
 	color: #FFFFFF;
 }
 
@@ -3348,8 +3441,13 @@ p {
 .download .downright .downloadwen p {
 	font-size: 16px;
 	color: #FFFFFF;
+	letter-spacing: 1.5px;
 }
-
+.download .downright .downloadwen .downloaditemdesc{
+	font-size: 14px;
+	color: #FFFFFF;
+	
+}
 .download .downright .section-title {
 	color: #FFFFFF;
 }
@@ -3363,7 +3461,31 @@ p {
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
-
+.download #downloadcenter{
+	display: flex;
+} 
+.download #downloadcenter #downleft {
+	/*margin-right: 30px;*/
+}
+.download #downloadcenter #downleft .tab{
+	display: block;
+	width: 165px;
+	height: 50px;
+	line-height: 50px;
+	margin-top: 50px;
+	margin-bottom: 80px;
+	border-radius: 0px;
+	background: #3B3A3B;
+	color: #FFFFFF;
+	padding: 0!important;
+	border: 0;
+} 
+.download #downloadcenter #downleft #tab1{
+	margin-top: 40px;
+} 
+.download #downloadcenter #downleft .active{
+	background: #19447F;
+} 
 .faq {
 	overflow: visible;
 }
@@ -3582,6 +3704,7 @@ h2 {
 /* ---------------------------------------------------------------- */
 
 @media only screen and (max-width: 575.98px) {
+	
 	.our-team-section .hezuocontent {
 		margin: 60px 0 30px;
 		color: #222222;
@@ -3604,15 +3727,28 @@ h2 {
 		/*padding-bottom: 30px;*/
 		position: relative;
 	}
+	.download .mg3050 {
+      margin: 30px 0 0px;
+    }
 	.download .downloadwen .downloaditemcontent {
-	    margin: 30px 0 15px;
 	    letter-spacing: 1.5px;
 	    width: 99%;
 	}
+	.download .downright .itemdowncontent {
+    margin: 15px 0!important;
+}
 	.download .titlename .section-title {
-		margin-top: 120px;
+		margin-top: 15px;
 	    height: 80px;
 	    color: #FFFFFF;
+	}
+	.download #downleft{
+		display: flex;
+		flex-direction: row;
+	}
+	.download #downleft a{
+		margin-right: 15px;
+		margin-bottom: 0!important;
 	}
 	.download .downloadcontent .downloadimg {
 		display: inline-block;
@@ -3641,6 +3777,12 @@ h2 {
 		font-size: 52px;
 		color: #FFFFFF!important;
 	}
+	.download .downright {
+    padding-right: 0px;
+}
+.download #downloadcenter #downleft {
+    margin-right: 15px;
+}
 	.download .downright .downloadwen p {
 		font-size: 14px;
 		color: #FFFFFF;
@@ -3652,6 +3794,18 @@ h2 {
 		padding: 0 10px 0 0;
 		align-items: center;
 	}
+	.download #downloadcenter #downleft .tab{
+	display: block;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	border-radius: 0px;
+	background: #3B3A3B;
+	color: #FFFFFF;
+} 
 
 	.download #blackbg {
     padding-left: 20px;
@@ -3666,8 +3820,6 @@ h2 {
 	font-size: 18px;
 }
 .download .downright .downloadwen {
-    padding: 30px 0px 0px;
-    width: 90%;
     color: #FFFFFF;
 }
 }
@@ -4907,4 +5059,12 @@ li a:hover{
 		width: 60px;
 		height: 60px!important;
 	}
+}
+.pagination{
+	display: flex;
+	justify-content: center;
+}
+
+.pagination li{
+	margin: 0 5px;
 }

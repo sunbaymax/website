@@ -1,14 +1,5 @@
 $(function() {
-	$("body").on("click", "#news #searchmore", function() {
-		let curnew = $(this).parent().find('.active').text();
-		let _type = '';
-		if(curnew == "企业新闻") {
-			_type = 1
-		} else {
-			_type = 2
-		}
-		location.href = 'news.html?type=' + _type
-	});
+
 	$.ajax({
 		type: "post",
 		url: "http://out.ccsc58.cc/DATA_PORT_ZHONGJIZHILENG_1.02/public/index.php/index/tag/index",
@@ -31,8 +22,7 @@ $(function() {
 		async: true,
 		dataType: 'json',
 		success: function(res) {
-			$('.introduction').html(res.content);
-			$('.introduction').html(res.content);
+			$('.introduction').html(res.introduce);
 			var chanpin = '';
 			$.each(res.product, function(index, value) {
 				chanpin += `<li>
@@ -41,6 +31,10 @@ $(function() {
 			});
 			$('.producttitpush').html('')
 			$('.producttitpush').html(chanpin);
+			$('.newsall').text(res.news.one.length+res.news.two.length);
+			$('.hangyeall').text(res.news.one.length);
+			$('.qiyeall').text(res.news.two.length);
+			
 		},
 		error: function(err) {
 			console.log(err)
@@ -53,10 +47,8 @@ $(function() {
 		dataType: 'json',
 		success: function(res) {
 			var newstittle = '';
-			$.each(res.info, function(index, value) {
-				newstittle += `<li>
-											<a href='news.html?id=${value.id}'>${value.title}</a>
-										</li>`;
+			$.each(res.data.message, function(index, value) {
+				newstittle += `<li><a href='news.html?id=${value.id}'>${value.title}</a></li>`;
 			});
 			$('.newstitlepush').html('')
 			$('.newstitlepush').html(newstittle);

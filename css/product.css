@@ -8,9 +8,15 @@
 
 .productcontent .productcontentFR {
 	display: flex;
-	max-height: 1700px;
+	max-height: 1500px;
 }
-
+.productcontentFR .productlist li a{
+	font-size:18px;
+	color: #333333;
+}
+.productcontentFR li a:hover{
+	color: #1E5BB3;
+}
 .proitemleft {
 	margin-right: 50px;
 }
@@ -61,10 +67,12 @@
 	margin: 30px 0;
 }
 .productcontent .productcontentR .introduction {
-	letter-spacing: 2.5px;
+	letter-spacing: 1.5px;
 	color: #333;
 	font-size: 16px;
 	line-height: 28px;
+	text-align:justify; 
+	text-justify:inter-ideograph;
 }
 
 .productcontent .productcontentR .sectittle {
@@ -84,8 +92,8 @@
 	border-bottom: 1px dashed #CCCCCC;
 	font-size: 18px;
 	color: #333333;
-	height: 40px;
-	line-height: 10px;
+	/*height: 40px;*/
+	line-height: 20px;
 }
 
 .pro_labels ul{
@@ -98,7 +106,7 @@
 }
 .pro_labels ul li{
 	/*width:25%;*/
-	margin-right: 25px;
+	margin-right: 20px;
 	margin-top: 20px;
 }
 .pro_news ul li{
@@ -108,7 +116,7 @@
 }
 .productcontent .productcontentL .jianjie{
 	font-size: 15px;
-	letter-spacing: 1px;
+	letter-spacing: 1.5px;
 	color: #666;
 	line-height: 28px;
 }
