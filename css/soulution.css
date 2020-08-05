@@ -36,6 +36,10 @@
 	font-size: 20px;
 	color: #212121;
 	margin: 15px 0;
+	display: block;
+}
+.productcontentL .soulutionitem .soulutionitemItemname:hover{
+	color: #1E5CB3;
 }
 .productcontentL .soucontent .Itemimg img{
 	width: 100%;
@@ -63,6 +67,9 @@
 }
 .newitem .newItemname{
 	margin-top: 15px;
+}
+#soulutioncontent .breadcrumb>.active {
+    color: #1E5CB3;
 }
 .newitem .newtypeItemimg img{
 	margin: 15px 0;
@@ -280,5 +287,12 @@
 	}
 	#newspush img {
 		max-width: 100%;
+	}
+	.pro_labels ul {
+	    display: flex;
+	    display: -webkit-flex;
+	    justify-content: end;
+	    flex-direction: row;
+	    flex-wrap: wrap;
 	}
 }

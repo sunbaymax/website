@@ -185,6 +185,10 @@
 #newscontent .newItemname {
 	color: #222222;
 	font-size: 20px;
+	display: block;
+}
+#newscontent .newItemname:hover{
+	color: #1E5CB3;
 }
 
 #newscontent .newItecontent {
@@ -255,5 +259,12 @@
 	}
 	#newspush img {
 		max-width: 100%;
+	}
+	.pro_labels ul {
+	    display: flex;
+	    display: -webkit-flex;
+	    justify-content: end;
+	    flex-direction: row;
+	    flex-wrap: wrap;
 	}
 }

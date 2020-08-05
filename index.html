@@ -135,7 +135,7 @@
 					<div class="row">
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInUp" data-speed="0.3s">
 							<div class="section-heading">
-								<img src="img/companybg.png" class="companyimg" />
+								<img src="img/companybg.jpg" class="companyimg" />
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInUp" data-speed="0.3s">
@@ -418,10 +418,10 @@
 													
 									
 											</div>
-											<ul class="pager">
+											<!--<ul class="pager">
 											    <li><a href="#">&lt;</a></li>
 											    <li><a href="#">&gt;</a></li>
-											</ul>
+											</ul>-->
 										</div>
 										
 								</div>
@@ -500,7 +500,7 @@
 
 											<div class="footerflexcol">
 												<span class="footerwen">公司地址</span>
-												<span class="footeraddress mgt5">北京市·丰台区汉威国际一区西塔623-624室</span>
+												<span class="footeraddress mgt5">北京市·丰台区汉威国际一区西塔219室</span>
 											</div>
 										</div>
 										<div class="footeritemleft mgt30">
@@ -763,7 +763,8 @@
 					$("#news #newsImg").attr("src",res.news.one[0].picture);
 					var newstr='';
 					$.each(res.news.one,function(index,value){
-						newstr+=`<li class="newitem" idi='${value.id}' itype=1 img='${value.picture}'>
+						if(index<=3){
+							newstr+=`<li class="newitem" idi='${value.id}' itype=1 img='${value.picture}'>
 							<a href='javascript:void(0)' class="newitemleft">
 								<span class="newsitemday">${index+1}</span>
 								<span class="newsitemmounth">${value.create_time}</span>
@@ -773,10 +774,13 @@
 								<a href='javascript:void(0)' class="newsitemdesc">${value.desc}</a>
 							</div>
 						</li>`;
+						}
+						
 					})
 					$("#enterprisenews").append(newstr);
 					var industrynewsstr='';
 					$.each(res.news.two,function(index,value){
+						if(index<=3){
 						industrynewsstr+=`<li class="newitem" idi='${value.id}' itype=2 img='${value.picture}'>
 									<a href='javascript:void(0)' class="newitemleft">
 										<span class="newsitemday">${index+1}</span>
@@ -787,6 +791,7 @@
 										<a href='javascript:void(0)' class="newsitemdesc">${value.desc}</a>
 									</div>
 								</li>`;
+							}
 					})
 					$("#industrynews").append(industrynewsstr);
 					//下载

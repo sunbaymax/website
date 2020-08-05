@@ -253,7 +253,7 @@
 
 											<div class="footerflexcol">
 												<span class="footerwen">公司地址</span>
-												<span class="footeraddress mgt5">北京市·丰台区汉威国际一区西塔623-624室</span>
+												<span class="footeraddress mgt5">北京市·丰台区汉威国际一区西塔219室</span>
 											</div>
 										</div>
 										<div class="footeritemleft mgt30">
@@ -485,16 +485,20 @@
 						let newstr=''
 						$.each(res.data.message, function(index,value) {
 							newstr+=`<div class="newitem">
-							<a href='news.html?id=${value.id}'>
-										<div class="newItemname">
+							<a href='news.html?id=${value.id}&type=${_type}' class="newItemname titlename">
 											${value.title}
-										</div>
+										</a>
 										<div class="newtypeItemimg">
+										<a href='news.html?id=${value.id}&type=${_type}'>
 											<img src='${value.picture}'/>
+											</a>
 										</div>
 										<div>
+										<a href='news.html?id=${value.id}&type=${_type}'>
 											&nbsp;&nbsp;&nbsp;&nbsp;${value.desc}
+											</a>
 										</div>
+										
 										<div class="bdsharebuttonbox" data-tag='share_${index+1}'>
 											<span>分享到：</span>
 											<a class="bds_tsina" data-cmd="tsina"></a>
@@ -502,7 +506,7 @@
 											<a class="bds_qzone" data-cmd="qzone"></a>
 											<a class="bds_weixin" data-cmd="weixin"></a>
 										</div>
-										</a>
+										
 		                             </div>`
 						});
 					    $("#newspush").append(newstr)

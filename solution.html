@@ -104,9 +104,9 @@
 											<a href="index.html">首页</a>
 										</li>
 										<li>
-											<a href="index.html#features">解决方案</a>
+											<a href="" class="soulutiontype">解决方案</a>
 										</li>
-										<li class="active newtype"></li>
+										<li class="active soulutioninfo"></li>
 									</ol>
 								</div>
 								<div id="soulutionpush" class="justify-content-center align-items-center">
@@ -241,7 +241,7 @@
 
 											<div class="footerflexcol">
 												<span class="footerwen">公司地址</span>
-												<span class="footeraddress mgt5">北京市·丰台区汉威国际一区西塔623-624室</span>
+												<span class="footeraddress mgt5">北京市·丰台区汉威国际一区西塔219室</span>
 											</div>
 										</div>
 										<div class="footeritemleft mgt30">
@@ -378,7 +378,6 @@
             	async:true,
             	dataType:"JSON",
             	success:function(res){
-            		console.log(res)
             		$('.solutionlist .solutionall').text(res.info.total);
 			        $('.solutionlist .yiyaoall').text(res.info.medicine);
 			        $('.solutionlist .shengxianall').text(res.info.fresh);
@@ -401,12 +400,62 @@
 			var _id = getQueryVariable("id");
 			var _type = getQueryVariable("type");
 			if(_id){
-				
+				    if(_type==1){
+						$(".soulutioninfo").text('案例详情');
+						$(".soulutiontype").text('医药行业');
+					    $(".soulutiontype").attr('href','solution.html?type=1');
+					}else{
+						$(".soulutioninfo").text('案例详情')
+					    $(".soulutiontype").text('食品生鲜行业');
+					    $(".soulutiontype").attr('href','solution.html?type=2');
+					}
+				   $.ajax({
+					url:'http://out.ccsc58.cc/DATA_PORT_ZHONGJIZHILENG_1.02/public/index.php/index/solution/info',
+					type:"post",
+					data:{
+						id:_id
+					},
+					dataType:'json',
+					success:function(res){
+						console.log(res);
+						let newstr=''
+						$.each(res.info, function(index,value) {
+							newstr+=`<div class="newitem">
+										<div class="newItemname">
+											${value.title}
+										</div>
+										<div class="newItemimg">
+											<img src='${value.picture}'/>
+										</div>
+										<div class="newItecontent">
+										${value.descript}
+										</div>
+										<div class="bdsharebuttonbox" data-tag="share_1">
+											<span>分享到：</span>
+											<a class="bds_tsina" data-cmd="tsina"></a>
+											<a class="bds_sqq" data-cmd="sqq"></a>
+											<a class="bds_qzone" data-cmd="qzone"></a>
+											<a class="bds_weixin" data-cmd="weixin"></a>
+										</div>
+		                             </div>`
+						});
+					    $("#soulutionpush").append(newstr);
+					    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+					},
+					error:function(err){
+						console.log(err)
+					}
+				})
 			}else{
+			
 				if(_type==1){
-					$(".newtype").text('医药行业');
+					$(".soulutioninfo").text('医药行业');
+					$(".soulutiontype").text(' 解决方案');
+					$(".soulutiontype").attr('href','index.html#features');
 				}else{
-					$(".newtype").text('食品生鲜行业');
+					$(".soulutioninfo").text('食品生鲜行业');
+					$(".soulutiontype").text(' 解决方案');
+					$(".soulutiontype").attr('href','index.html#features');
 				}
 				initnew(_type,1,false)
 			}
@@ -432,17 +481,22 @@
 						let soulstr=''
 						$.each(res.data.message, function(index,value) {
 							soulstr+=`<div class="soulutionitem">
-										<div class="soulutionitemItemname">
+							            <a href='solution.html?id=${value.id}&type=${_type}' class="soulutionitemItemname">
 											${value.title}
-										</div>
+										</a>
 										<div class="soucontent row">
 											<div class="Itemimg col-md-5 col-lg-5">
+											 <a href='solution.html?id=${value.id}&type=${_type}'>
 												<img src='${value.picture}' />
+												</a>
 											</div>
 											<div class="souItecontent col-md-7 col-lg-7">
+											<a href='solution.html?id=${value.id}&type=${_type}'>
 											${value.desc}
+											</a>
 											</div>
 										</div>
+										
 										<div class="bdsharebuttonbox" data-tag='share_${index+1}'>
 											<span>分享到：</span>
 											<a class="bds_tsina" data-cmd="tsina"></a>
@@ -450,7 +504,7 @@
 											<a class="bds_qzone" data-cmd="qzone"></a>
 											<a class="bds_weixin" data-cmd="weixin"></a>
 										</div>
-										</a>
+										
 		                             </div>`
 						});
 					    $("#soulutionpush").append(soulstr)
