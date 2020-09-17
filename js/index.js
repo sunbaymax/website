@@ -107,14 +107,14 @@ $(function() {
 	var oldColor = "";
 
 	$(".fixmenu .item .tel_img").mouseover(function() {
-		setTimeout(() => {
+		setTimeout(function() {
 			$(this).css("border-radius", "10px 0px 0px 10px");
 			$(this).css("background-color", "#1E5CB3");
 			$(this).next().removeClass('ishidden')　
 		}, 500);
 	})
 	$(".fixmenu .item .tel_img").next().mouseout(function() {
-		setTimeout(() => {
+		setTimeout(function(){
 			$(this).prev().css("border-radius", "10px");
 			$(this).prev().css("background-color", "#2E2E2E");
 			$(this).addClass('ishidden')
@@ -125,12 +125,12 @@ $(function() {
 		$(".fixmenu .item .tel_img").css("border-radius", "10px");
 		$(".fixmenu .item .tel_img").css("background-color", "#2E2E2E");
 		$(this).parents('.item').prev().find('.telnums').addClass('ishidden');
-		setTimeout(() => {
+		setTimeout(function() {
 			$(this).css("background-color", "#1E5CB3");
 			$(this).prev().removeClass('ishidden');
 		}, 500);
 	}).mouseout(function() {
-		setTimeout(() => {
+		setTimeout(function() {
 			$(this).css("background-color", "#2E2E2E");
 			$(this).prev().addClass('ishidden')
 		}, 500);
