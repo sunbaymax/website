@@ -277,6 +277,7 @@ p {
 	color: #000000;
 	background: #CDCECD;
 	border-radius: 3px;
+	font-size: 14px;
 }
 .download .downright .pager {
     padding-left: 0;
@@ -346,6 +347,7 @@ p {
 	margin-bottom: 20px;
 	font-size: 24px;
 	letter-spacing: 1.5px;
+	font-weight: 600;
 	
 }
 
@@ -402,8 +404,11 @@ p {
 
 @media only screen and (max-width: 575.98px) {
 	.section-padding {
-		padding: 10px 0;
+		padding: 30px 0;
 		position: relative;
+	}
+	.footer-top {
+	    padding-top: 30px!important;
 	}
 	.services .companyimg {
 		width: 100%;
@@ -422,6 +427,11 @@ p {
 	.download .kongge {
 		height: 30px;
 	}
+	.section-heading {
+		text-align: center;
+		margin-bottom: 0px;
+	}
+
 }
 
 .default-outline-btn {
@@ -1046,7 +1056,7 @@ p {
 
 .header .main-menu .navbar-nav .nav-link {
 	margin: 0 0 0 27px;
-	font-weight: 400;
+	font-weight: 500;
 	display: inline-block;
 	height: 40px;
 	line-height: 40px;
@@ -1828,41 +1838,40 @@ p {
 	-webkit-transform: scale(1, 1);
 	transform: scale(1);
 }
-
 .screenshots-slider.owl-theme .owl-nav button {
 	position: absolute;
 	top: 50%;
 	display: inline-block;
 	border-radius: 5px;
-	font-size: 32px;
+	font-size: 60px;
 	/*font-size: 14px;*/
-	height: 50px;
+	height: 100px;
 	width: 50px;
 	color: #fff !important;
-	background: #ededed;
+	/*background: #ededed;*/
 	/*background: #15db95;*/
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	transform: translateY(-50%);
-	-webkit-box-shadow: 0 10px 16px 0 rgba(21, 219, 150, 0.15);
-	box-shadow: 0 10px 16px 0 rgba(21, 219, 150, 0.15);
+	/*-webkit-box-shadow: 0 10px 16px 0 rgba(21, 219, 150, 0.15);
+	box-shadow: 0 10px 16px 0 rgba(21, 219, 150, 0.15);*/
 	-webkit-transition: all 0.25s linear;
 	transition: all 0.25s linear;
 }
 
 .screenshots-slider.owl-theme .owl-nav button:hover {
-	color: #fff !important;
-	background: #1E5DB3;
+	color: #1E5DB3 !important;
+	background: #F7F6F9;
 }
 
+
 .screenshots-slider.owl-theme .owl-nav button.owl-next {
-	right: -30px;
+	right: -60px;
 }
 
 .screenshots-slider.owl-theme .owl-nav button.owl-prev {
-	left: -30px;
+	left: -60px;
 }
-
 
 /* ---------------------------------------------------------------- */
 
@@ -1968,12 +1977,14 @@ p {
 .solutionright .nav li a,
 #news .nav li a {
 	display: inline-block;
-	width: 160px;
-	height: 50px;
-	line-height: 50px;
+	width: auto;
+	padding: 0 15px;
+	height: 40px;
+	line-height: 40px;
 	color: #000000;
-	font-size: 20px;
+	font-size: 18px;
 	text-align: center;
+	font-weight: 500;
 }
 
 .solutionright .nav .active,
@@ -2032,8 +2043,13 @@ p {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	color: #999;
 }
-
+#news .qiyenews .newitem .newitemleft:hover{
+	color: #FFFFFF;
+	background: #1E5CB3;
+	border-radius: 5px;
+}
 .qiyenews .newitem .newitemleft:hover {
 	color: #FFFFFF;
 	background: #1E5CB3;
@@ -2117,19 +2133,16 @@ p {
 	text-align: center;
 	width: 60px;
 	font-size: 30px;
-	color: #999999;
+	/*color: #999999;*/
 }
 
-.newitem .newitemleft .newsitemdayhover {
-	color: #FFFFFF;
-}
 
 .newitem .newitemleft .newsitemmounth {
 	display: inline-block;
 	text-align: center;
 	width: 60px;
 	font-size: 12px;
-	color: #999999;
+	/*color: #999999;*/
 }
 
 .price-table-active .price-table {
@@ -2501,6 +2514,39 @@ p {
     width: 100%;
     height: 280px;
 }
+.screenshots-slider.owl-theme .owl-nav button {
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	border-radius: 5px;
+	font-size: 32px;
+	/*font-size: 14px;*/
+	height: 50px;
+	width: 50px;
+	color: #fff !important;
+	background: #ededed;
+	/*background: #15db95;*/
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-box-shadow: 0 10px 16px 0 rgba(21, 219, 150, 0.15);
+	box-shadow: 0 10px 16px 0 rgba(21, 219, 150, 0.15);
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
+}
+
+.screenshots-slider.owl-theme .owl-nav button:hover {
+	color: #1E5DB3 !important;
+	/*background: #ededed;*/
+}
+
+.screenshots-slider.owl-theme .owl-nav button.owl-next {
+	right: -30px;
+}
+
+.screenshots-slider.owl-theme .owl-nav button.owl-prev {
+	left: -30px;
+}
 }
 
 
@@ -2709,18 +2755,22 @@ p {
 
 .team-card .desc {
 	display: inline-block;
-	width: 120px;
+	/*width: 120px;
 	height: 36px;
-	line-height: 36px;
+	line-height: 36px;*/
 	margin-bottom: 10px;
 	border-radius: 5px;
 	font-size: 14px;
 	/*padding: 10px 20px;*/
-	color: #fff !important;
-	background: #1E5DB3;
+	color: #1E5DB3 !important;
+	background: #FFFFFF;
 	text-transform: capitalize;
-	-webkit-box-shadow: 0 10px 16px 0 rgba(21, 219, 150, 0.15);
-	box-shadow: 0 10px 16px 0 rgba(21, 219, 150, 0.15);
+	/*-webkit-box-shadow: 0 10px 16px 0 rgba(21, 219, 150, 0.15);
+	box-shadow: 0 10px 16px 0 rgba(21, 219, 150, 0.15);*/
+	border: 1px solid #1E5cb3;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
 	/*border-radius: 50px;*/
 }
 
@@ -2743,7 +2793,13 @@ p {
 	transform: translateX(-50%);
 }
 
-
+#features #soulutionmyTab #soulutionbtn{
+	position: absolute;
+	top:0;
+	right: 0;
+	border: #1E5CB3 1px solid;
+	color: #1E5CB3;
+}
 /* ---------------------------------------------------------------- */
 
 
@@ -2788,13 +2844,19 @@ p {
 		display: flex;
 		align-items: center;
 		background: #fff;
-		padding: 0 15px 0 0;
+		padding: 0px;
 		box-sizing: border-box;
 		border-bottom: 1px solid #CCCCCC;
 	}
+	#features #soulutionmyTab #soulutionbtn{
+		position: relative;
+		margin: 5px 0;
+		border: #1E5CB3 1px solid;
+		color: #1E5CB3;
+	}
 	.solutionright .nav li a {
 		display: inline-block;
-		width: 120px;
+		width: auto;
 		height: 36px;
 		line-height: 36px;
 		color: #000000;
@@ -2859,7 +2921,7 @@ p {
 		height: auto;
 		
 	}
-		.qiyenews .newitem .newitemright .newsitemdesc {
+	.qiyenews .newitem .newitemright .newsitemdesc {
 		font-size: 14px;
 		color: #999;
 		margin-top: -3px;
@@ -3368,7 +3430,7 @@ p {
 #news {
 	margin-bottom: -150px;
 	z-index: 99;
-	padding: 66px 0 100px;
+	padding: 30px 0 100px;
 }
 
 .download .titlename .section-title {
@@ -3469,6 +3531,7 @@ p {
 	/*margin-right: 30px;*/
 }
 .download #downloadcenter #downleft .tab{
+	font-size: 18px!important;
 	display: block;
 	width: 165px;
 	height: 50px;
@@ -3705,9 +3768,39 @@ h2 {
 /* ---------------------------------------------------------------- */
 
 @media only screen and (max-width: 575.98px) {
+	.services h2.section-title {
+	    padding: 30px 0 15px;
+	}
+	#features {
+	    padding: 60px 0px 60px;
+	    position: relative;
+	}
+	#news {
+	    margin-bottom: -150px;
+	    z-index: 99;
+	    padding: 0px 0 100px;
+	}
+	#news .titlename .section-title {
+	    height: 100px;
+	}
+	.section-title {
+	    text-align: left;
+	    position: relative;
+	    padding: 30px 0 10px;
+	    margin-bottom: 20px;
+	    font-size: 24px;
+	    letter-spacing: 1.5px;
+	    font-weight: 600;
+	}
+	#features .section-title{
+		padding-top: 0!important;
+	}
+	#news .features-row .mg30 {
+		margin: 0 auto 30px!important;
+	}
 	.download .downright .downloaditemtitle {
-    font-size: 16px;
-}
+	    font-size: 16px;
+	}
 	.our-team-section .hezuocontent {
 		margin: 60px 0 30px;
 		color: #222222;
@@ -3742,7 +3835,11 @@ h2 {
 }
 	.download .titlename .section-title {
 		margin-top: 15px;
-	    height: 80px;
+	    height: 100px;
+	    color: #FFFFFF;
+	}
+	.footer .section-title {
+	    height: 100px!important;
 	    color: #FFFFFF;
 	}
 	.download #downleft{
@@ -3853,8 +3950,8 @@ textarea.form-control:focus {
 	outline: none;
 	border: none;
 	color: #100e17;
-	-webkit-box-shadow: 0 10px 26px 0 rgba(0, 51, 204, 0.15);
-	box-shadow: 0 10px 26px 0 rgba(0, 51, 204, 0.15);
+	/*-webkit-box-shadow: 0 10px 26px 0 rgba(0, 51, 204, 0.15);
+	box-shadow: 0 10px 26px 0 rgba(0, 51, 204, 0.15);*/
 }
 
 textarea.form-control {
@@ -3965,12 +4062,12 @@ textarea.form-control {
 
 .footer .footeritemleft .footertelnum {
 	color: #FFFFFF;
-	font-size: 30px;
+	font-size: 16px;
 }
 
 .footer .footeritemleft .footeraddress {
 	color: #FFFFFF;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .footer .footeritemleft .mgt5 {
@@ -4060,7 +4157,7 @@ textarea.form-control {
 
 .footer .rightwen {
 	color: #FFFFFF;
-	font-size: 18px;
+	font-size: 16px;
 	margin-top: 0px;
 }
 
@@ -4070,7 +4167,7 @@ textarea.form-control {
 
 .footer .saoyisao {
 	margin-top: 15px;
-	font-size: 14px!important;
+	font-size: 16px!important;
 }
 
 
@@ -4084,7 +4181,7 @@ textarea.form-control {
 }
 
 .footer .footerright {
-	padding-top: 45px;
+	padding-top: 30px;
 	letter-spacing: 1.5px;
 }
 
@@ -4124,9 +4221,10 @@ textarea.form-control {
 /* Copyright */
 
 .copyright {
-	padding: 50px 0 30px;
+	/*margin-top: 15px;*/
+	padding: 15px 0 30px;
 	/*background: rgba(255, 255, 255, 0.02);*/
-	font-size: 16px;
+	font-size: 14px;
 	color: #fff!important;
 	opacity: 1;
 	letter-spacing: 1.5px;
@@ -4863,9 +4961,9 @@ textarea.form-control {
 }
 
 #news .descbtn,#features .descbtn{
-	width: 120px;
-	height: 38px;
-	line-height: 26px;
+	width: 92px;
+	height: 34px;
+	line-height: 22px;
 }
 /* ---------------------------------------------------------------- */
 

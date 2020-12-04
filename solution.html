@@ -153,10 +153,13 @@
 											<a href="javascript:void(0)">全部(<span class="solutionall"></span>条)</a>
 										</li>
 										<li>
-											<a href="solution.html?type=1">医药行业(<span class="yiyaoall"></span>条)</a>
+											<a href="solution.html?type=1">医药冷链(<span class="yiyaoall"></span>条)</a>
 										</li>
 										<li>
-											<a href="solution.html?type=2">食品生鲜行业(<span class="shengxianall"></span>条)</a>
+											<a href="solution.html?type=2">食品生鲜冷链(<span class="shengxianall"></span>条)</a>
+										</li>
+										<li>
+											<a href="solution.html?type=3">智慧养殖(<span class="yangzhiall"></span>条)</a>
 										</li>
 
 									</ul>
@@ -379,13 +382,14 @@
 			<script >
             $.ajax({
             	type:"get",
-            	url:"http://out.ccsc58.cc/DATA_PORT_ZHONGJIZHILENG_1.02/public/index.php/index/solution/statistics",
+            	url:"http://www.ccsc58.com/DATA_PORT_ZHONGJIZHILENG_1.02/public/index.php/index/solution/statistics",
             	async:true,
             	dataType:"JSON",
             	success:function(res){
             		$('.solutionlist .solutionall').text(res.info.total);
 			        $('.solutionlist .yiyaoall').text(res.info.medicine);
 			        $('.solutionlist .shengxianall').text(res.info.fresh);
+			        $('.solutionlist .yangzhiall').text(res.info.yangzhi);
             	},
             	error:function(err){
             		
@@ -407,15 +411,19 @@
 			if(_id){
 				    if(_type==1){
 						$(".soulutioninfo").text('案例详情');
-						$(".soulutiontype").text('医药行业');
+						$(".soulutiontype").text('医药冷链');
 					    $(".soulutiontype").attr('href','solution.html?type=1');
+					}else if(_type==2){
+						$(".soulutioninfo").text('案例详情')
+					    $(".soulutiontype").text('食品生鲜冷链');
+					    $(".soulutiontype").attr('href','solution.html?type=2');
 					}else{
 						$(".soulutioninfo").text('案例详情')
-					    $(".soulutiontype").text('食品生鲜行业');
-					    $(".soulutiontype").attr('href','solution.html?type=2');
+					    $(".soulutiontype").text('智慧养殖');
+					    $(".soulutiontype").attr('href','solution.html?type=3');
 					}
 				   $.ajax({
-					url:'http://out.ccsc58.cc/DATA_PORT_ZHONGJIZHILENG_1.02/public/index.php/index/solution/info',
+					url:'http://www.ccsc58.com/DATA_PORT_ZHONGJIZHILENG_1.02/public/index.php/index/solution/info',
 					type:"post",
 					data:{
 						id:_id
@@ -454,20 +462,24 @@
 			}else{
 			
 				if(_type==1){
-					$(".soulutioninfo").text('医药行业');
+					$(".soulutioninfo").text('医药冷链');
 					$(".soulutiontype").text(' 解决方案');
 					$(".soulutiontype").attr('href','index.html#features');
+				}else if(_type==2){
+					$(".soulutioninfo").text('食品生鲜冷链')
+				    $(".soulutiontype").text('解决方案');
+				    $(".soulutiontype").attr('href','index.html#features');
 				}else{
-					$(".soulutioninfo").text('食品生鲜行业');
-					$(".soulutiontype").text(' 解决方案');
-					$(".soulutiontype").attr('href','index.html#features');
+					$(".soulutioninfo").text('智慧养殖')
+				    $(".soulutiontype").text('解决方案');
+				    $(".soulutiontype").attr('href','index.html#features');
 				}
 				initnew(_type,1,false)
 			}
 		
             function initnew(_type,page = 1,isFirst = true){
 				$.ajax({
-					url:'http://out.ccsc58.cc/DATA_PORT_ZHONGJIZHILENG_1.02/public/index.php/index/solution/index',
+					url:'http://www.ccsc58.com/DATA_PORT_ZHONGJIZHILENG_1.02/public/index.php/index/solution/index',
 					type:"post",
 					data:{
 						type:_type,

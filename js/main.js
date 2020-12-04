@@ -150,7 +150,7 @@ function appinocks_owl_carousel() {
 				items: 3
 			},
 			1000: {
-				items: 3.3
+				items: 3.7
 			}
 		}
 	});
@@ -260,7 +260,7 @@ function appinocks_contactForm() {
 		} else if(!validateEmail === true) {
 			jQuery('div.email-invalid').slideDown(500).delay(2000).slideUp(500);
 		} else {
-			let url = "http://out.ccsc58.cc/DATA_PORT_ZHONGJIZHILENG_1.02/public/index.php/index/message/add"
+			let url = "http://www.ccsc58.com/DATA_PORT_ZHONGJIZHILENG_1.02/public/index.php/index/message/add"
 			let _data={
                            name:name,
                            telephone:tel,

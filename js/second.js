@@ -3,7 +3,7 @@
 $(function () {
   $.ajax({
     type: "post",
-    url: "http://out.ccsc58.cc/DATA_PORT_ZHONGJIZHILENG_1.02/public/index.php/index/tag/index",
+    url: "http://www.ccsc58.com/DATA_PORT_ZHONGJIZHILENG_1.02/public/index.php/index/tag/index",
     async: true,
     dataType: 'json',
     success: function success(res) {
@@ -19,7 +19,7 @@ $(function () {
   });
   $.ajax({
     type: "post",
-    url: "http://out.ccsc58.cc/DATA_PORT_ZHONGJIZHILENG_1.02/public/",
+    url: "http://www.ccsc58.com/DATA_PORT_ZHONGJIZHILENG_1.02/public/",
     async: true,
     dataType: 'json',
     success: function success(res) {
@@ -40,7 +40,7 @@ $(function () {
   });
   $.ajax({
     type: "post",
-    url: "http://out.ccsc58.cc/DATA_PORT_ZHONGJIZHILENG_1.02/public/index.php/index/news/hotList/",
+    url: "http://www.ccsc58.com/DATA_PORT_ZHONGJIZHILENG_1.02/public/index.php/index/news/hotList/",
     async: true,
     dataType: 'json',
     success: function success(res) {

@@ -32,27 +32,34 @@ $(function() {
 		let _src=$(this).attr('cimg');
 		$('#features .solutionImg').attr('src',_src);
 		$(this).addClass('active')
-		$("#soulutionmyTab #sphy").removeClass('active')
-		$('#features .tab-content #menuyiyao').addClass("show");
-		$('#features .tab-content #menushipin').removeClass("show");
+		$(this).parent().siblings().children('a').removeClass('active')
+		$("#features .tab-content #menuyiyao").addClass('active').show()
+		$('#features .tab-content #menushipin,#features .tab-content #breed').removeClass("show").hide();
 	})
 	$('#soulutionmyTab #sphy').click(function(e) {
 		let _src=$(this).attr('cimg');
 		$('#features .solutionImg').attr('src',_src)
 		$(this).addClass('active')
-		$("#soulutionmyTab #yyhy").removeClass('active')
+		$(this).parent().siblings().children('a').removeClass('active')
+		$('#features .tab-content #menushipin').addClass("show").show();
+		$('#features .tab-content #menuyiyao,#features .tab-content #breed').removeClass("show").hide()
+	})
+	$('#soulutionmyTab #zhyz').click(function(e) {
+		let _src=$(this).attr('cimg');
+		$('#features .solutionImg').attr('src',_src)
 		$(this).addClass('active')
-		$(this).siblings().removeClass('active')
-		$('#features .tab-content #menuyiyao').removeClass("show");
-		$('#features .tab-content #menuyiyao').hide()
-		$('#features .tab-content #menushipin').addClass("show");
+		$(this).parent().siblings().children('a').removeClass('active')
+		$('#features .tab-content #breed').addClass("show").show();
+		$('#features .tab-content #menuyiyao,#features .tab-content #menushipin').removeClass("show").hide()
 	})
     $('#soulutionmyTab #soulutionbtn').click(function(e) {
         let type=$(this).parent().find('.active').text();
-        if(type=='医药行业'){
+        if(type=='医药冷链'){
         	location.href = "solution.html?type=1";
+        }else if(type=='食品生鲜冷链'){
+        	location.href = "solution.html?type=2";
         }else{
-            location.href = "solution.html?type=2";	
+            location.href = "solution.html?type=3";	
         }
     })
 	$('#news #qynewbtn').click(function(e) {
@@ -107,30 +114,32 @@ $(function() {
 	var oldColor = "";
 
 	$(".fixmenu .item .tel_img").mouseover(function() {
-		setTimeout(function() {
+		console.log("123")
+		setTimeout(()=>{
 			$(this).css("border-radius", "10px 0px 0px 10px");
 			$(this).css("background-color", "#1E5CB3");
 			$(this).next().removeClass('ishidden')　
-		}, 500);
+		},500)
+			
+		
 	})
 	$(".fixmenu .item .tel_img").next().mouseout(function() {
-		setTimeout(function(){
 			$(this).prev().css("border-radius", "10px");
 			$(this).prev().css("background-color", "#2E2E2E");
 			$(this).addClass('ishidden')
-		}, 500);
 
 	});
 	$(".fixmenu .item .ma_img").mouseover(function() {
+		console.log("123")
 		$(".fixmenu .item .tel_img").css("border-radius", "10px");
 		$(".fixmenu .item .tel_img").css("background-color", "#2E2E2E");
 		$(this).parents('.item').prev().find('.telnums').addClass('ishidden');
-		setTimeout(function() {
+		setTimeout(()=>{
 			$(this).css("background-color", "#1E5CB3");
 			$(this).prev().removeClass('ishidden');
 		}, 500);
 	}).mouseout(function() {
-		setTimeout(function() {
+		setTimeout(()=>{
 			$(this).css("background-color", "#2E2E2E");
 			$(this).prev().addClass('ishidden')
 		}, 500);
@@ -152,11 +161,13 @@ $(function() {
 		$(this).css("background-color", "#2E2E2E");
 		//		$(this).prev().addClass('ishidden')
 	});
-	$("body").mouseover('#news .newitem .newitemleft', function() {
-		$(this).children('span').css("color", "#FFFFFF")
-	}).mouseout(function() {
-		$(this).children('span').css("color", "#999999")
-	});
+//	$("body").mouseover('#news .newitem .newitemleft', function() {
+//		$(this).find('.newsitemday').css("color", "#FFFFFF")
+//		$(this).find('.newsitemmounth').css("color", "#FFFFFF")
+//	}).mouseout(function() {
+//		$(this).find('.newsitemday').css("color", "#999999")
+//		$(this).find('.newsitemmounth').css("color", "#999999")
+//	});
 	$("body").on("click", ".about .item", function() {
 		let _id = $(this).find('.desc').attr('idi');
 		location.href = 'product.html?id=' + _id
