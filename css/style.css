@@ -2569,7 +2569,7 @@ p {
 	cursor: pointer;
 	display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 	/*background: #fff;*/
 	/*background: url(../img/productbg.png) no-repeat center center;*/
@@ -3420,6 +3420,18 @@ p {
 	opacity: 0.8;
 }
 
+.productblack{
+	position: absolute;
+    top: 336px;
+    left: 80px;
+    z-index: 999;
+   
+}
+.productblack img{
+	display: inline-block;
+	width: 250px;
+	height: 36px;
+}
 
 /* ---------------------------------------------------------------- */
 
@@ -5169,4 +5181,59 @@ li a:hover{
 
 .pagination li{
 	margin: 0 5px;
+}
+/* side */
+.side{position:fixed;width:50px;height:275px;right:0;top:348px;z-index:100;}
+.side ul li{width:50px;height:50px;float:left;position:relative;margin-bottom: 2px;}
+.side ul li .sidebox{position:absolute;width:50px;height:50px;border-radius:5px 0 0 5px;top:0;right:0;transition:all 0.3s;background:#000022;color:#fff;font:16px/50px "微软雅黑";overflow:hidden;}
+.side ul li a:hover .sidebox{width: 200px;}
+.side ul li .sidetop{width:50px;height:50px;line-height:50px;display:inline-block;background:#000;opacity:0.8;filter:Alpha(opacity=80);transition:all 0.3s;}
+.side ul li .sidetop:hover{background:#1E5CB3;}
+.side ul li img{float:right;}
+
+.side2{
+	position: fixed;
+	width: 40px;
+	right: 10px;
+	z-index: 100;
+	top: 536px;
+	height: 80px;
+}
+.side2 ul li{
+	width: 40px;
+	height: 40px;
+}
+.side2 ul li a{
+	display: block;
+	background-color: #1E5CB3;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	line-height: 40px;
+}
+.side2 ul li a img{
+	vertical-align: middle;
+	display: inline-block;
+}
+.side2 ul li a:hover{
+	background-color: #000022;
+}
+.side2 ul li .weixin{
+	position: absolute;
+	left: -100px;
+	bottom: 0;
+	display: none;
+}
+.side2 ul li .weixin em{
+	/*background: url(../img/arr3.png) no-repeat;*/
+	width: 5px;
+	height: 17px;
+	display: block;
+	position: absolute;
+	right: -5px;
+	top: 50%;
+	margin-top: 3px;
+}
+.side2 ul li .weixin img{
+	display: block;
 }
