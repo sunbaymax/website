@@ -252,7 +252,8 @@ p {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 40px;
+	height: 30px;
+	line-height: 30px;
 	border-bottom: 1px solid #CCCCCC;
 }
 .download .downright .itemdowncontent{
@@ -272,8 +273,9 @@ p {
 }
 .downright .downloaditemtop .download-btnok{
 	display: inline-block;
-	width: 80px;
-	height: 24px;
+	width: 50px;
+	height: 20px;
+	line-height: 20px;
 	color: #000000;
 	background: #CDCECD;
 	border-radius: 3px;
@@ -324,7 +326,9 @@ p {
 	background-color: #1E5CB3;
 	color: #FFFFFF;
 }
-
+.services{
+	    padding: 60px 0 15px!important;
+}
 .section-padding .companyimg {
 	width: 100%;
 	height: 420px;
@@ -345,7 +349,7 @@ p {
 	position: relative;
 	padding: 0 0 10px;
 	margin-bottom: 20px;
-	font-size: 24px;
+	font-size: 18px;
 	letter-spacing: 1.5px;
 	font-weight: 600;
 	
@@ -360,7 +364,7 @@ p {
 	margin-right: 10px;
 	margin-left: 10px;
 	color: #000000;
-	font-size: 16px;
+	font-size: 8px;
 	text-transform: uppercase;
 }
 
@@ -407,6 +411,10 @@ p {
 		padding: 30px 0;
 		position: relative;
 	}
+	.services {
+	    padding: 0px 0 15px!important;
+	}
+	
 	.footer-top {
 	    padding-top: 30px!important;
 	}
@@ -1458,6 +1466,7 @@ p {
 	.services-resp-margin:first-child {
 		margin-top: 0;
 	}
+
 }
 
 
@@ -1979,13 +1988,14 @@ p {
 #news .nav li a {
 	display: inline-block;
 	width: auto;
-	padding: 0 15px;
+	/*padding: 0 15px;*/
 	height: 40px;
 	line-height: 40px;
 	color: #000000;
 	font-size: 18px;
 	text-align: center;
-	font-weight: 500;
+	font-weight: 550;
+	width: 140px;
 }
 
 .solutionright .nav .active,
@@ -2106,12 +2116,14 @@ p {
 
 .newitem .newitemright .newsitemtitle {
 	display: inline-block;
-	font-size: 18px;
+	font-size: 17px;
 	color: #444;
 	height: 40px;
-	line-height: 40px;
+	line-height: 46px;
 	width: 100%;
 	border-bottom: 1px solid #CCCCCC;
+	font-weight: 550;
+	
 }
 
 
@@ -2127,6 +2139,7 @@ p {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	font-weight: 600;
 }
 
 .newitem .newitemleft .newsitemday {
@@ -2143,6 +2156,7 @@ p {
 	text-align: center;
 	width: 60px;
 	font-size: 12px;
+	letter-spacing: 1px!important;
 	/*color: #999999;*/
 }
 
@@ -2564,14 +2578,15 @@ p {
 	
 }
 .about .product-detail{
-	background: #fff;
-	
+	/*background: #fff;*/
+	/*height: 645px;*/
 }
 .about .product-detail #productspush{
-	background: #fff;
+	/*background: #fff;*/
 	display: flex;
 	flex-wrap: wrap;
-	height: 645px;
+	height: 705px;
+	padding-bottom: 60px;
 }
 
 .about #productspush .team-card{
@@ -2585,6 +2600,7 @@ p {
     align-items: center;
     width: 453px;
     height: 300px;
+    overflow: hidden;
     /*margin: 15px 0px 0px 15px;*/
 	/*background: #fff;*/
 	/*background: url(../img/product-itembg.png) no-repeat;
@@ -2752,7 +2768,7 @@ p {
 	height: 60px;
 	line-height: 60px;
 	text-align: center;
-	background: url('../../img/product-titlebg.png') no-repeat;
+	background: url('../../website/img/product-titlebg.png') no-repeat;
 	background-size:100% 100% ;
 	font-size: 20px;
 	font-family: Source Han Sans CN;
@@ -2765,14 +2781,22 @@ p {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/*border-bottom: 2px solid #ffffff;*/
+	border-bottom: 2px solid #ffffff;
 	cursor: pointer;
-	background: #fff;
-	margin-bottom: 2px;
+	background: #ededed;
+	/*margin-bottom: 2px;*/
+}
+.product-items ul li:last-child{
+	border-bottom: 2px solid #ededed;
 }
 .product-items ul .active{
 	
-	border-bottom: 2px solid #1E5DB3;
+	border-bottom: 2px solid #1E5DB3!important;
+}
+.about .product-detail #form1{
+	position: absolute;
+    bottom: 0px;
+    width: 97%;
 }
 .product-items ul .active span{
 	color: #1E5DB3;
@@ -2781,6 +2805,24 @@ p {
 .product-items .productclass .pro-wdj{
 	display: inline-block;
 	width: 35px;
+	height: 42px;
+	margin: 30px 0 5px;
+}
+.product-items .productclass:nth-child(2) .pro-wdj{
+	display: inline-block;
+	width: 48px;
+	height: 46px;
+	margin: 30px 0 5px;
+}
+.product-items .productclass:nth-child(3) .pro-wdj{
+	display: inline-block;
+	width: 49px;
+	height: 38px;
+	margin: 30px 0 5px;
+}
+.product-items .productclass:nth-child(4) .pro-wdj{
+	display: inline-block;
+	width: 48px;
 	height: 42px;
 	margin: 30px 0 5px;
 }
@@ -2892,7 +2934,7 @@ p {
 #features .section-title::after {
 	position: absolute;
 	content: "";
-	left: 2%;
+	left: 49.5%;
 	height: 2px;
 	background: #333333;
 	-webkit-transform: translateX(-50%);
@@ -2901,7 +2943,7 @@ p {
 
 #features #soulutionmyTab #soulutionbtn{
 	position: absolute;
-	top:0;
+	top:6px;
 	right: 0;
 	border: #1E5CB3 1px solid;
 	color: #1E5CB3;
@@ -2941,9 +2983,14 @@ p {
 	}
 	.productblack {
 	    position: absolute;
-	    bottom: -50px!important;
+	    bottom: -35px!important;
 	    left: 5px;
 	    z-index: 1;
+	}
+	.productblack img {
+	    display: inline-block;
+	    width: auto;
+	    height: 26px;
 	}
 	.about .product-items ul{
 		display: flex;
@@ -2953,10 +3000,14 @@ p {
 		border: 1px solid #ccc;
 	}
 	.about .product-items ul li{
-		width: 130px;
+		width: 50%;
 		height: 100px;
 		display: flex;
 		align-items: center;
+	}
+	.about .product-items ul li:nth-child(even){
+		border-left: 2px solid #ffffff;
+		box-sizing: border-box;
 	}
 	.about .product-detail #productspush {
 	    background: #fff;
@@ -2988,6 +3039,15 @@ p {
 		margin: 60px auto;
 		background: #F8FCFF;
 	}
+	.product-items .product-items-tittle {
+	   display: none;
+	}
+	.about #productspush .item .new {
+	    position: absolute;
+	    top: 30px;
+	    left: 0px;
+	    z-index: 99;
+	}
 	.about .more-product button:hover {
 		color: #ffffff;
 		background: #1E5CB3;
@@ -3017,6 +3077,7 @@ p {
 	    width: 170px;
 	    height: 170px;
 	}
+	
 	.solutionright .nav li a {
 		display: inline-block;
 		width: auto;
@@ -3025,6 +3086,7 @@ p {
 		color: #000000;
 		font-size: 16px;
 		text-align: center;
+		padding: 0 15px;
 	}
 	.solutionright .nav .active {
 		background: #1E5CB3;
@@ -3175,11 +3237,18 @@ p {
 	color: #000 !important;
 	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
 }
+.download .titlename{
+	margin-top: 100px;
+}
 .download .downright .downloaditemtitle{
-	font-size: 18px;
+	font-size: 17px;
+    /*color: #007bff;*/
+    color: #4685DC;
+    font-weight: 550;
+    
 }
 .download .downright .downloaditemdesc{
-	margin: 5px 0;
+	/*margin: 5px 0;*/
 	font-size: 14px;
 }
 .download-btn:hover {
@@ -3291,6 +3360,11 @@ p {
 /* ---------------------------------------------------------------- */
 
 @media only screen and (max-width: 575.98px) {
+	.about .product-detail #form1 {
+	    position: absolute;
+	    bottom: 0px;
+	    width: auto;
+	}
 	.download-section-inner .download-buttons {
 		text-align: center;
 		display: block !important;
@@ -3510,7 +3584,7 @@ p {
 #news .titlename .section-title::after {
 	position: absolute;
 	content: "";
-	left: 50%;
+	left: 49.5%;
 	height: 2px;
 	background: #333333;
 	-webkit-transform: translateX(-50%);
@@ -3588,7 +3662,7 @@ p {
 }
 .productblack{
 	position: absolute;
-    bottom: -120px;
+    bottom: -30px;
     left: 5px;
     z-index: 1;
    
@@ -3630,19 +3704,17 @@ p {
 	margin-right: 10px;
 	margin-left: 10px;
 	color: #FFFFFF;
-	font-size: 16px;
+	font-size: 8px;
 }
 .download .downloadcontent{
-	background: url(../img/downbg.png) no-repeat center center;
-	background-size: cover;
-	background-size: 100% 100%;
+	
 	background-attachment: fixed;
 	border-radius: 5px;
 }
 .download .titlename .section-title::after {
 	position: absolute;
 	content: "";
-	left: 50%;
+	left: 49.5%;
 	height: 1px;
 	background: #FFFFFF;
 	-webkit-transform: translateX(-50%);
@@ -3661,12 +3733,16 @@ p {
 
 .download .downright {
 	display: flex;
+	background: url(../img/downbg.png) no-repeat center center;
+	background-size: 100% 100%;
+	height: 414px;
 }
 
 .download .downright .downloadwen {
 	/*padding: 30px 0px 0px;*/
 	/*width: 70%;*/
 	color: #FFFFFF;
+	
 }
 
 .download #blackbg {
@@ -3685,8 +3761,10 @@ p {
 	letter-spacing: 1.5px;
 }
 .download .downright .downloadwen .downloaditemdesc{
+	line-height: 24px;
 	font-size: 14px;
-	color: #FFFFFF;
+    color: #FFFFFF;
+    font-weight: 600;
 	
 }
 .download .downright .section-title {
@@ -3706,24 +3784,48 @@ p {
 	display: flex;
 } 
 .download #downloadcenter #downleft {
-	/*margin-right: 30px;*/
+	margin-right: 15px;
+	
+}
+.download .downtype{
+	width: 100%;
+	height: 84px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #0E1011;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	border-radius:10px 10px 0px 0px;
 }
 .download #downloadcenter #downleft .tab{
-	font-size: 18px!important;
+	font-size: 16px;
 	display: block;
-	width: 165px;
+	width: 160px;
 	height: 50px;
 	line-height: 50px;
-	margin-top: 50px;
-	margin-bottom: 80px;
+	margin-top: 15px;
+	margin-bottom: 0px;
 	border-radius: 0px;
 	background: #3B3A3B;
 	color: #FFFFFF;
 	padding: 0!important;
 	border: 0;
+}
+.download #downleft .downboxleft{
+	width: 160px;
+	height: 414px;
+	overflow: hidden;
+} 
+.download #downleft .downboxleft #downitems{
+	width: 160px;
+	background: url(../img/downbg.png) no-repeat center center;
+	background-size: 100% 100%;
+	height: 332px;
 } 
 .download #downloadcenter #downleft #tab1{
-	margin-top: 40px;
+	margin-top: 0px;
 } 
 .download #downloadcenter #downleft .active{
 	background: #19447F;
@@ -4025,8 +4127,20 @@ h2 {
 		flex-direction: row;
 		align-items: flex-end;
 	}
+	.download .downtype {
+	    display: none;
+	}
+	.download #downleft .downboxleft #downitems {
+	    width: 100%;
+	    background: url(../img/downbg.png) no-repeat center center;
+	    background-size: 100% 100%;
+	    height: 60px;
+	    display: flex;
+	    flex-direction: row;
+	    justify-content: space-between;
+	}
 	.download #downleft a{
-		margin-right: 15px;
+		/*margin-right: 15px;*/
 		margin-bottom: 0!important;
 	}
 	.download .downloadcontent .downloadimg {
@@ -4060,7 +4174,7 @@ h2 {
     padding-right: 0px;
 }
 .download #downloadcenter #downleft {
-    margin-right: 15px;
+    margin-right: 0px;
 }
 	.download .downright .downloadwen p {
 		font-size: 14px;
@@ -4073,13 +4187,34 @@ h2 {
 		padding: 0 10px 0 0;
 		align-items: center;
 	}
+	.download #downloadcenter .download-content{
+		background: url(../img/downbg.png) no-repeat center center;
+        background-size: 100% 100%;
+	}
+	.download #downloadcenter #downleft #tab1 {
+	   margin-top: 15px;
+	}
+	.download .titlename {
+	    margin-top: 15px;
+	}
+	.download #downleft .downboxleft {
+	    background: none;
+	    height: auto;
+	    display: flex;
+	    width: 100%;
+	}
+	.download .downright {
+	    display: flex;
+	    background: none;
+	    height: auto;
+	}
 	.download #downloadcenter #downleft .tab{
 	display: block;
 	width: 100px;
 	height: 30px;
 	line-height: 30px;
 	padding: 0;
-	margin-top: 30px;
+	margin-top: 15px;
 	margin-bottom: 50px;
 	border-radius: 0px;
 	background: #3B3A3B;
@@ -4100,6 +4235,7 @@ h2 {
 }
 .download .downright .downloadwen {
     color: #FFFFFF;
+    background: none;
 }
 }
 
@@ -5139,9 +5275,16 @@ textarea.form-control {
 }
 
 #news .descbtn,#features .descbtn{
-	width: 92px;
+	/*width: 92px;
 	height: 34px;
 	line-height: 22px;
+	*/
+	width: 88px;
+    height: 34px;
+    line-height: 26px;
+    padding: 0;
+    height: 26px;
+}
 }
 /* ---------------------------------------------------------------- */
 

@@ -420,7 +420,7 @@ if(_keywords()){
                     <a class="page-scroll" >管理平台</a>
                     <ul class="dropdown-menu">
                         <li><a target="_blank"  href="http://www.ccsc58.cc/wlgl/Admin/login.html">中集智冷温控平台</a></li>
-                        <li>	<a target="_blank" href="http://39.105.175.18:18102/#/Login">养殖监控助手</a>
+                        <li>	<a target="_blank" href="http://y.ccsc58.com">养殖监控助手</a>
 										</li></li>
                         <li><a  target="_blank" href="http://39.105.79.197:8080/index.html">LA-IOT云平台</a></li>
                         <li><a  target="_blank" href="http://cold.ccsc58.com">冷库助手云平台</a></li>
@@ -668,7 +668,7 @@ if(_keywords()){
                     <div class="col-md-12 hidden-xs">
                         <hr/>
                         <span class="text-left" style="font-size: 16px;color: #ffffff;">
-						    Copyright2016-2017 北京中集智冷科技有限公司 版权所有 京ICP备16051215号
+						    Copyright2016-2017 北京中集智冷科技有限公司 版权所有 <a href="https://beian.miit.gov.cn" target="_blank">京ICP备16051215号-1</a>
                                 </span>
 
                     </div>

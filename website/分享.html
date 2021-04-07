@@ -1,64 +1,79 @@
-<html>
- <head>
-  <title>Share function</title>
-  <meta charset="utf-8"/>
- </head>
- <style>
- 	.banner{
- 		display: inline-block;
- 		width: 100%;
- 		height: auto;
- 	}
- 	.banner img{
- 		width: 100%;
- 		height: 404px;
- 	}
- </style>
- <body>
- 	
- 	<div class="banner">
- 		<img src="website/img/news-banner.png"/>
- 	</div>
-  <div class="bdsharebuttonbox" data-tag="share_1">
-    	<a class="bds_tsina" data-cmd="tsina"></a>
-	<a class="bds_sqq" data-cmd="sqq"></a>
-    	<a class="bds_qzone" data-cmd="qzone"></a>	
-	<a class="bds_weixin" data-cmd="weixin"></a>
-<!--	<a class="bds_more" data-cmd="more">更多</a>
-	<a class="bds_count" data-cmd="count"></a>
-	-->
-	
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS实现下拉菜单</title>
+
+</head>
+<style>
+	*{
+    margin:0px;
+    padding: 0px;
+}
+#div1{
+    width: 200px;
+    margin: 0 auto;
+    line-height: 25px;
+}
+ul{
+    list-style: none;
+}
+li{
+    background: #ccc;margin-bottom: 3px;
+}
+dl{
+    background: #eee;display:none;
+}
+.active{
+    background: #F90;
+}
+
+</style>
+<body>
+    <div id="div1">
+        <ul id="menu">
+            <li class="active">菜单1</li>
+            <dl>
+                <dd>菜单1.1</dd>
+                <dd>菜单1.2</dd>
+                <dd>菜单1.3</dd>
+                <dd>菜单1.4</dd>
+            </dl>
+            <li class="active">菜单2</li>
+            <dl>
+                <dd>菜单2.1</dd>
+                <dd>菜单2.2</dd>
+                <dd>菜单2.3</dd>
+                <dd>菜单2.4</dd>
+            </dl>
+            <li class="active">菜单3</li>
+            <dl>
+                <dd>菜单3.1</dd>
+                <dd>菜单3.2</dd>
+                <dd>菜单3.3</dd>
+                <dd>菜单3.4</dd>
+            </dl>
+        </ul>
+    </div>
+</body>
 <script>
-	
- 
-//	window._bd_share_config = {
-//		common : {
-//			bdText : 'Custom share content',	
-//			bdDesc : 'Custom share summary',	
-//			bdUrl : 'Custom share URL address', 	
-//			bdPic : 'Custom share pictures'
-//		},
-//		share : [{
-//			"bdSize" : 16
-//		}],
-//		slide : [{	   
-//			bdImg : 0,
-//			bdPos : "right",
-//			bdTop : 100
-//		}],
-//		image : [{
-//			viewType : 'list',
-//			viewPos : 'top',
-//			viewColor : 'black',
-//			viewSize : '16',
-//			viewList : ['qzone','tsina','huaban','tqq','renren']
-//		}],
-//		selectShare : [{
-//			"bdselectMiniList" : ['qzone','tqq','kaixin001','bdxc','tqf']
-//		}]
-//	}
-	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+
+    var odiv1=document.getElementById("div1");
+    var oli=odiv1.getElementsByTagName("li");
+    var odl=odiv1.getElementsByTagName("dl");
+    for(var i=0;i<oli.length;i++){
+        oli[i].index=i;
+        oli[i].onclick=function(){
+            for(var j=0;j<oli.length;j++){
+                oli[j].className='';
+                odl[j].style.display='none';
+            }
+            this.className="active";
+            odl[this.index].style.display="block";
+        }
+    }
+
+
 </script>
- </body>
 </html>
+
